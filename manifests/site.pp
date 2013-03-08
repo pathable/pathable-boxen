@@ -76,10 +76,9 @@ node default {
     ]:
   }
 
-  # applications
-  include chrome
-  include skype
-  include sublime_text_2
+  # pathable
+  include pathable::environment
+  include pathable::applications
 
   file { "${boxen::config::srcdir}/pathable-boxen":
     ensure => link,
