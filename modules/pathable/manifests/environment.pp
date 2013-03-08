@@ -2,8 +2,8 @@ class pathable::environment {
   include elasticsearch
   #include java
   include memcached
-  include mysql
   include redis
 
-  mysql::db { 'mydb': }
+  mysql::db { 'pathable2_development': }
+  postgresql::db { 'boxen_development': }
 }
