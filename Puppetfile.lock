@@ -4,29 +4,9 @@ GITHUBTARBALL
     boxen (1.2.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-chrome
-  specs:
-    chrome (1.1.0)
-
-GITHUBTARBALL
   remote: boxen/puppet-dnsmasq
   specs:
     dnsmasq (1.0.0)
-
-GITHUBTARBALL
-  remote: boxen/puppet-dropbox
-  specs:
-    dropbox (1.0.0)
-
-GITHUBTARBALL
-  remote: boxen/puppet-elasticsearch
-  specs:
-    elasticsearch (1.0.0)
-
-GITHUBTARBALL
-  remote: boxen/puppet-firefox
-  specs:
-    firefox (1.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-gcc
@@ -52,11 +32,6 @@ GITHUBTARBALL
   remote: boxen/puppet-hub
   specs:
     hub (1.0.0)
-
-GITHUBTARBALL
-  remote: boxen/puppet-java
-  specs:
-    java (1.0.5)
 
 GITHUBTARBALL
   remote: boxen/puppet-memcached
@@ -109,16 +84,6 @@ GITHUBTARBALL
     ruby (3.1.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-skype
-  specs:
-    skype (1.0.1)
-
-GITHUBTARBALL
-  remote: boxen/puppet-sublime_text_2
-  specs:
-    sublime_text_2 (1.1.0)
-
-GITHUBTARBALL
   remote: boxen/puppet-sudo
   specs:
     sudo (1.0.0)
@@ -134,24 +99,31 @@ GITHUBTARBALL
     inifile (0.9.0)
 
 GITHUBTARBALL
+  remote: pathable/puppet-elasticsearch
+  specs:
+    elasticsearch (1.0.1)
+
+GITHUBTARBALL
+  remote: pathable/puppet-java
+  specs:
+    java (1.0.7)
+
+GITHUBTARBALL
   remote: puppetlabs/puppetlabs-stdlib
   specs:
     stdlib (3.0.0)
 
 DEPENDENCIES
   boxen (= 1.2.0)
-  chrome (= 1.1.0)
   dnsmasq (= 1.0.0)
-  dropbox (= 1.0.0)
-  elasticsearch (= 1.0.0)
-  firefox (= 1.0.0)
+  elasticsearch (= 1.0.1)
   gcc (= 1.0.0)
   git (= 1.0.0)
   graphviz (= 1.0.0)
   homebrew (= 1.1.0)
   hub (= 1.0.0)
   inifile (= 0.9.0)
-  java (= 1.0.5)
+  java (= 1.0.7)
   memcached (= 1.1.0)
   mysql (= 1.0.0)
   nginx (= 1.1.0)
@@ -162,9 +134,7 @@ DEPENDENCIES
   postgresql (= 1.0.0)
   redis (= 1.0.0)
   ruby (= 3.1.0)
-  skype (= 1.0.1)
   stdlib (= 3.0.0)
-  sublime_text_2 (= 1.1.0)
   sudo (= 1.0.0)
   swig (= 1.0.0)
 

@@ -1,6 +1,6 @@
 class pathable::environment {
   include elasticsearch
-  #include java
+  include graphviz
   include memcached
   include mysql
   include postgresql
