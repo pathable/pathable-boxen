@@ -76,7 +76,12 @@ node default {
     ]:
   }
 
-  file { "${boxen::config::srcdir}/our-boxen":
+  # applications
+  include chrome
+  include skype
+  include sublime_text_2
+
+  file { "${boxen::config::srcdir}/pathable-boxen":
     ensure => link,
     target => $boxen::config::repodir
   }

@@ -4,6 +4,11 @@ GITHUBTARBALL
     boxen (1.2.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-chrome
+  specs:
+    chrome (1.1.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-dnsmasq
   specs:
     dnsmasq (1.0.0)
@@ -54,6 +59,11 @@ GITHUBTARBALL
     skype (1.0.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-sublime_text_2
+  specs:
+    sublime_text_2 (1.1.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-sudo
   specs:
     sudo (1.0.0)
@@ -70,6 +80,7 @@ GITHUBTARBALL
 
 DEPENDENCIES
   boxen (= 1.2.0)
+  chrome (= 1.1.0)
   dnsmasq (= 1.0.0)
   gcc (= 1.0.0)
   git (= 1.0.0)
@@ -82,5 +93,6 @@ DEPENDENCIES
   ruby (= 3.1.0)
   skype (= 1.0.1)
   stdlib (= 3.0.0)
+  sublime_text_2 (= 1.1.0)
   sudo (= 1.0.0)
 
