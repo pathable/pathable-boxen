@@ -36,6 +36,7 @@ github "sudo",            "1.0.0"
 
 github "elasticsearch",   "1.0.1", :repo => "pathable/puppet-elasticsearch"
 github "graphviz",        "1.0.0"
+github "imagemagick",     "1.1.0"
 github "java",            "1.0.7", :repo => "pathable/puppet-java"
 github "memcached",       "1.1.0"
 github "mysql",           "1.0.0"

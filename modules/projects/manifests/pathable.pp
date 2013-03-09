@@ -1,5 +1,6 @@
 class projects::pathable {
   include graphviz
+  include imagemagick
 
   boxen::project { 'pathable':
     elasticsearch => true,
