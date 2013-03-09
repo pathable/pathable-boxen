@@ -3,7 +3,7 @@ class projects::pathable {
 
   mysql::db { 'pathable2_development': }
 
-  boxen::project { 'trollin':
+  boxen::project { 'pathable':
     elasticsearch => true,
     mysql         => true,
     nginx         => true,
