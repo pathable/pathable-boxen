@@ -10,6 +10,6 @@ class projects::pathable {
     memcached     => true,
     redis         => true,
     ruby          => '1.9.3',
-    source        => 'boxen/pathable'
+    source        => 'pathable/pathable'
   }
 }
