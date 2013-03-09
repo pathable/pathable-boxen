@@ -78,7 +78,7 @@ node default {
 
   # pathable
   include pathable::environment
-  # include pathable::applications
+  include pathable::applications
 
   file { "${boxen::config::srcdir}/pathable-boxen":
     ensure => link,

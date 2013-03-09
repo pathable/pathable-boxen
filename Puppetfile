@@ -45,6 +45,7 @@ github "postgresql",      "1.0.0"
 github "redis",           "1.0.0"
 github "swig",            "1.0.0"
 
+github "github_for_mac",  "1.0.0", :repo => kevinSuttle/puppet-github_for_mac
 #github "chrome",          "1.1.0"
 #github "dropbox",         "1.0.0"
 #github "firefox",         "1.0.0"
