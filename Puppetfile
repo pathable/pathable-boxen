@@ -45,6 +45,7 @@ github "pkgconfig",       "1.0.0"
 github "postgresql",      "1.0.0"
 github "redis",           "1.0.0"
 github "swig",            "1.0.0"
+github "xquartz",         "1.0.0"
 
 #github "chrome",          "1.1.0"
 #github "dropbox",         "1.0.0"
