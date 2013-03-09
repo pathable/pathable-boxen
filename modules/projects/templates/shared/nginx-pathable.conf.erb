@@ -1,0 +1,47 @@
+upstream <%= server_name %> {
+ server unix:<%= scope.lookupvar "boxen::config::socketdir" %>/<%= name %>;
+}
+
+server {
+  access_log <%= scope.lookupvar "nginx::config::logdir" %>/<%= name %>.access.log main;
+  listen 80;
+  root <%= scope.lookupvar "boxen::config::srcdir" %>/<%= name %>/public;
+  server_name <%= server_name %>;
+
+  # Max size for file uploads
+  client_max_body_size 100M;
+
+  # Location for the Upstream (a/k/a Unicorn or Mongrel)
+  location @app_pathable {
+      index index.html index.htm;
+
+      # needed to forward user's IP address to rails
+      proxy_set_header  X-Real-IP         $remote_addr;
+      proxy_set_header  X-Forwarded-For   $proxy_add_x_forwarded_for;
+      proxy_set_header  Host              $http_host;
+      #proxy_set_header  X-Forwarded-Proto $scheme;
+      #proxy_set_header  X-Queue-Start     't=$start_time';
+
+      proxy_redirect off;
+      proxy_max_temp_file_size 0;
+
+      proxy_pass http://upstream_pathable;
+  }
+
+  location ~ ^/_api/[^_] {
+      rewrite ^/_api/(.*)$ /$1 break;
+      proxy_set_header  X-Real-IP        $remote_addr;
+      proxy_set_header  X-Forwarded-For  $proxy_add_x_forwarded_for;
+      proxy_set_header  Host             $http_host;
+      proxy_redirect    off;
+      proxy_pass        http://apiserver;
+  }
+
+  location / {
+      if (-f $document_root/system/maintenance.html) { return 503; }
+      # auth is disabled for this server
+      # auth_basic            "Restricted";
+      # auth_basic_user_file  /etc/nginx/servers/pathable.users;
+      try_files  $uri $uri/index.html $uri.html @app_pathable;
+  }
+}
